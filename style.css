@@ -1,0 +1,72 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #f6f3ee;
+  color: #2b2b2b;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+h1 { text-align: center; }
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+input, select, textarea, button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+button {
+  background: #6b4f3b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover { opacity: 0.9; }
+
+.hidden { display: none !important; }
+
+.pigeon-item, .message-item, .user-item {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.progress-bar {
+  background: #eee;
+  border-radius: 6px;
+  height: 10px;
+  overflow: hidden;
+  margin: 6px 0;
+}
+
+.progress-fill {
+  background: #6b9e5b;
+  height: 100%;
+  transition: width 0.5s linear;
+}
+
+#errorBox {
+  background: #ffe1e1;
+  color: #a33;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.status-flying { color: #b58a00; }
+.status-delivered { color: #2f8f2f; }
+.status-lost { color: #a33; }
+.status-available { color: #2f8f2f; }

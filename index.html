@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pigeon Network</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <h1>🐦 Pigeon Network</h1>
+  <div id="errorBox" class="hidden"></div>
+
+  <!-- ==================== PANTALLA DE AUTENTICACIÓN ==================== -->
+  <div id="authScreen">
+
+    <div class="card" id="loginCard">
+      <h2>Iniciar sesión</h2>
+      <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Contraseña" required>
+        <button type="submit">Iniciar sesión</button>
+      </form>
+      <p>¿No tienes cuenta? <a href="#" id="showSignup">Regístrate</a></p>
+    </div>
+
+    <div class="card hidden" id="signupCard">
+      <h2>Registrarse</h2>
+      <form id="signupForm">
+        <input type="text" id="signupUsername" placeholder="Nombre de usuario" required>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <input type="password" id="signupPassword" placeholder="Contraseña" required>
+        <select id="signupCity" required>
+          <option value="">Selecciona tu ciudad</option>
+          <option value="oaxaca">Oaxaca</option>
+          <option value="puebla">Puebla</option>
+          <option value="cdmx">Ciudad de México</option>
+        </select>
+        <button type="submit">Registrarse</button>
+      </form>
+      <p>¿Ya tienes cuenta? <a href="#" id="showLogin">Inicia sesión</a></p>
+    </div>
+
+  </div>
+
+  <!-- ==================== PANEL PRINCIPAL ==================== -->
+  <div id="dashboard" class="hidden">
+
+    <div class="card" id="userInfo">
+      <p>Usuario: <strong id="infoUsername"></strong></p>
+      <p>Ubicación: <strong id="infoCity"></strong></p>
+      <p>REAL: <span id="clockReal"></span> &nbsp;|&nbsp; PIGEON WORLD: <span id="clockWorld"></span></p>
+      <button id="logoutBtn">Cerrar sesión</button>
+    </div>
+
+    <div class="card">
+      <h2>Mis palomas <span id="pigeonCount"></span></h2>
+      <div id="pigeonsList"></div>
+    </div>
+
+    <div class="card">
+      <h2>Nueva carta</h2>
+      <form id="messageForm">
+        <label>Destinatario</label>
+        <select id="recipientSelect" required></select>
+        <label>Mensaje</label>
+        <textarea id="messageContent" placeholder="Escribe tu carta..." required></textarea>
+        <button type="submit">Enviar carta</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Usuarios disponibles</h2>
+      <div id="usersList"></div>
+    </div>
+
+    <div class="card">
+      <h2>Mis mensajes</h2>
+      <div id="messagesList"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+</body>
+</html>
